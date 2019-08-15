@@ -522,7 +522,7 @@ class Renderer:
         for element in paragraph_elem:
             if isinstance(element, str):
                 self._write(element)
-            elif isinstance(element, str):
+            elif isinstance(element, unicode):
                 self.writeUnicodeElement(element)
             elif isinstance(element, RawCode):
                 self._write(element.Data)
