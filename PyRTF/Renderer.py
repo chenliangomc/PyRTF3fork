@@ -1,5 +1,5 @@
 
-from copy import deepcopy
+#from copy import deepcopy
 
 from .PropertySets import (ParagraphPropertySet, TabPropertySet,
                           ShadingPropertySet, BorderPropertySet)
@@ -120,7 +120,7 @@ class Settings(list):
 
 
 class Renderer:
-    def __init__(self, write_custom_element_callback=None):
+    def __init__(self, write_custom_element_callback=None, **kwargs):
         self.character_style_map = {}
         self.paragraph_style_map = {}
         self.WriteCustomElement = write_custom_element_callback

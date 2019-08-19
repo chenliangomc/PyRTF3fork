@@ -141,10 +141,10 @@ class Document:
 
     # XXX this is a temporary fix until I figure out the best way to refactor
     # the renderer
-    def write(self, fhOrFilename):
+    def write(self, fhOrFilename, **kwargs):
         if isinstance(fhOrFilename, str):
             fh = open(fhOrFilename, 'w+')
         else:
             fh = fhOrFilename
-        r = Renderer()
+        r = Renderer(**kwargs)
         r.Write(self, fh)
