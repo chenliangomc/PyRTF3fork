@@ -477,7 +477,7 @@ class Renderer:
             elif clss == Table:
                 self.WriteTableElement(element)
 
-            elif clss == str:
+            elif clss in [str, unicode]:
                 self.WriteParagraphElement(Paragraph(element))
 
             elif clss in [RawCode, Image]:
@@ -581,6 +581,9 @@ class Renderer:
             #    if the data is just a string then we can now write it
             if isinstance(element, str):
                 self._write(element)
+
+            elif isinstance(element, unicode):
+                self.writeUnicodeElement(element)
 
             elif isinstance(element, RawCode):
                 self._write(element.Data)
