@@ -7,8 +7,8 @@ Programming Language :: Python
 License :: OSI Approved :: GNU General Public License (GPL)
 """
 
-import sys
-import os
+#import sys
+#import os
 
 from setuptools import setup, find_packages
 

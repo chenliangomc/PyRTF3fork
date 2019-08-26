@@ -1,6 +1,6 @@
 
 from copy import deepcopy
-from binascii import hexlify
+#from binascii import hexlify
 
 from .Renderer import Renderer
 from .Constants import *
