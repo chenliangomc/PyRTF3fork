@@ -560,6 +560,9 @@ class Renderer:
         if isinstance(text_elem.Data, str):
             self._write(text_elem.Data or '')
 
+        elif isinstance(text_elem.Data, unicode):
+            self.writeUnicodeElement(text_elem.Data)
+
         elif text_elem.Data == TAB:
             self._write(r'\tab ')
 
