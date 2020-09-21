@@ -100,7 +100,7 @@ class Settings(list):
         self._append = super(Settings, self).append
 
     def append(self, value, mask=None, fallback=None):
-        if (value is not 0) and value in [False, None, '']:
+        if (value != 0 or value is False) and value in [False, None, '']:
             if fallback: self._append(self, fallback)
 
         else:
