@@ -21,7 +21,6 @@ setup(
     platforms=['Any'],
     install_requires=['PyParsing'],
     setup_requires=[
-        'setuptools-markdown',
         'setuptools_scm',
     ],
     use_scm_version=True,
@@ -29,5 +28,4 @@ setup(
     classifiers=[_f for _f in classifiers.split('\n') if _f],
     keywords=('RTF', 'Rich Text', 'Rich Text Format', 'documentation',
               'reports'),
-    long_description_markdown_filename='README.md',
     packages=find_packages())
